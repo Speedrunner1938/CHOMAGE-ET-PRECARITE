@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprendre le Chômage</title>
+    <link rel="stylesheet" href="css/comprendre.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="page-header">
+        <h1>Comprendre le Chômage</h1>
+        <p>Explorez les causes, impacts et solutions pour lutter contre le chômage</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="comprendre.html" class="active">Comprendre</a>
+        <a href="precarite.html">Précarité</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+
+        <!-- Introduction Section -->
+        <section>
+            <h2>Qu'est-ce que le chômage ?</h2>
+            <p>
+                Le chômage désigne une situation où une personne capable de travailler cherche activement un emploi mais n'en trouve pas.
+                Ce phénomène peut être causé par des facteurs économiques, sociaux et technologiques.
+            </p>
+        </section>
+
+        <!-- Causes Section -->
+        <section class="causes-section">
+            <h2>Causes principales</h2>
+            <div class="causes-grid">
+                <!-- Economic Causes -->
+                <div class="cause-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Causes économiques</h3>
+                    <p>
+                        Les crises économiques et financières entraînent souvent des fermetures d'entreprises et des licenciements massifs.
+                        Par exemple, lors de la crise de 2008, de nombreuses banques ont fait faillite, et des milliers de personnes ont perdu
+                        leur emploi dans le secteur financier, mais aussi dans des secteurs liés, comme la construction ou l'industrie automobile.
+                        Cela provoque une augmentation rapide du chômage et met les familles en grande difficulté.
+                    </p>
+                </div>
+                
+                <!-- Social Causes -->
+                <div class="cause-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Causes sociales</h3>
+                    <p>
+                        Le manque de formation et les inégalités sociales empêchent de nombreuses personnes de trouver un emploi.
+                        Par exemple, dans certaines régions rurales, les jeunes n'ont pas accès à des écoles ou à des centres de formation adaptés.
+                        Ils se retrouvent donc sans qualification suffisante pour occuper les postes disponibles. Cela les pousse souvent à partir
+                        dans d'autres régions, aggravant le problème de chômage local.
+                    </p>
+                </div>
+
+                <!-- Technological Causes -->
+                <div class="cause-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Causes technologiques</h3>
+                    <p>
+                        L'automatisation remplace les métiers traditionnels. Par exemple, dans les usines, les robots effectuent désormais
+                        des tâches répétitives autrefois réalisées par les ouvriers. Cela réduit le besoin de main-d'œuvre humaine,
+                        particulièrement dans des secteurs comme la production industrielle. Bien que cela puisse créer de nouveaux emplois
+                        dans la technologie, il est difficile pour les travailleurs non qualifiés de s'adapter à ces changements rapides.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <h2>Témoignages</h2>
+            <div class="testimonial">
+                <p>"Quand mon entreprise a fermé, j'ai perdu mon emploi. Avec mon diplôme limité, il est difficile de trouver un travail stable. Je suis passée par des contrats précaires et, parfois, j'ai dû accepter des emplois à temps partiel qui ne couvraient même pas mes besoins de base. En tant que mère célibataire, jongler entre les besoins de mes enfants et la recherche d'un emploi est devenu une lutte quotidienne."</p>
+                <span>- Marie, 42 ans, ancienne secrétaire</span>
+            </div>
+            <div class="testimonial">
+                <p>"Après la fermeture de l'usine où je travaillais depuis 20 ans, je suis devenu chômeur. La reconversion est difficile, surtout à mon âge. Les offres que je trouve sont souvent des CDD ou des emplois à temps partiel mal rémunérés. L'assurance-chômage m'aide, mais ce n'est qu'une solution temporaire."</p>
+                <span>- Jean, 50 ans, ouvrier dans l'industrie </span>
+            </div>
+            <div class="testimonial">
+                <p>"Même avec un diplôme, je ne trouve que des emplois à durée limitée ou des stages mal payés. Le marché du travail est saturé, et les emplois stables semblent inaccessibles. Les périodes de chômage entre les contrats m’épuisent mentalement et financièrement."</p>
+                <span>- Aline, 28 ans, diplômée en communication</span>
+            </div>
+        </section>
+
+
+        <!-- Call-to-Action Section -->
+        <section class="cta-section">
+            <h2>Découvrez nos solutions</h2>
+            <p>Agissez dès aujourd'hui ! Consultez notre page <a href="solutions.html">Solutions</a>.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AEFE. Par Adam, Léa, et Yolla.</p>
+        <div>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Chart.js for Statistics -->
+    <script>
+        const ctx = document.getElementById('unemploymentChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2019', '2020', '2021', '2022', '2023'],
+                datasets: [{
+                    label: 'Taux de chômage (%)',
+                    data: [6.5, 7.2, 6.8, 6.0, 5.5],
+                    borderColor: '#4CAF50',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {legend: {display: true}}
+            }
+        });
+    </script>
+</body>
+</html>
